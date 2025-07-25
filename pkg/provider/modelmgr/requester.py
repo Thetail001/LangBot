@@ -68,6 +68,8 @@ class ProviderAPIRequester(metaclass=abc.ABCMeta):
 
     requester_cfg: dict[str, typing.Any] = {}
 
+    builtin_embedding_model: RuntimeEmbeddingModel = None
+
     def __init__(self, ap: app.Application, config: dict[str, typing.Any]):
         self.ap = ap
         self.requester_cfg = {**self.default_config}

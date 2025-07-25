@@ -295,6 +295,9 @@ const jaJP = {
     fileName: 'ファイル名',
     noResults: '検索結果がありません',
     retrieveError: '検索に失敗しました',
+    builtinEmbeddingModel: 'ビルトイン',
+    builtinEmbeddingModelDescription:
+      'ビルトイン埋め込みモデルはテキストのベクトル化に最低限のサポートを提供します。より良いパフォーマンスを得るために、カスタム埋め込みモデルを使用することを検討してください',
   },
   register: {
     title: 'LangBot を初期化 👋',

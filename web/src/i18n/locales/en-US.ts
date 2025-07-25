@@ -292,6 +292,9 @@ const enUS = {
     fileName: 'File Name',
     noResults: 'No results',
     retrieveError: 'Retrieve failed',
+    builtinEmbeddingModel: 'Builtin',
+    builtinEmbeddingModelDescription:
+      'Built-in embedding model can provide minimal support for text vectorization, please consider using a custom embedding model for better performance',
   },
   register: {
     title: 'Initialize LangBot 👋',

@@ -60,9 +60,13 @@ class RuntimeKnowledgeBase:
 
             task_context.set_current_action('Embedding chunks')
 
-            embedding_model = await self.ap.model_mgr.get_embedding_model_by_uuid(
-                self.knowledge_base_entity.embedding_model_uuid
-            )
+            if self.knowledge_base_entity.embedding_model_uuid == '__builtin__':
+                embedding_model = self.ap.model_mgr.get_builtin_embedding_model()
+            else:
+                embedding_model = await self.ap.model_mgr.get_embedding_model_by_uuid(
+                    self.knowledge_base_entity.embedding_model_uuid
+                )
+
             # embed chunks
             await self.embedder.embed_and_store(
                 kb_id=self.knowledge_base_entity.uuid,

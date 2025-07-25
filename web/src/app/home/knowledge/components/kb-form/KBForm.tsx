@@ -207,6 +207,11 @@ export default function KBForm({
                         </SelectTrigger>
                         <SelectContent className="fixed z-[1000]">
                           <SelectGroup>
+                            <SelectItem value="__builtin__">
+                              <span className="italic">
+                                {t('knowledge.builtinEmbeddingModel')}
+                              </span>
+                            </SelectItem>
                             {embeddingModelNameList.map((item) => (
                               <SelectItem key={item.value} value={item.value}>
                                 {item.label}
@@ -221,6 +226,12 @@ export default function KBForm({
                     {initKbId
                       ? t('knowledge.cannotChangeEmbeddingModel')
                       : t('knowledge.embeddingModelDescription')}
+                    <br />
+                    {field.value === '__builtin__' && (
+                      <span className="text-sm text-gray-500">
+                        {t('knowledge.builtinEmbeddingModelDescription')}
+                      </span>
+                    )}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

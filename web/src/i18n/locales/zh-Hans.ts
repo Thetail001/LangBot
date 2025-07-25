@@ -284,6 +284,9 @@ const zhHans = {
     fileName: '文件名',
     noResults: '暂无结果',
     retrieveError: '检索失败',
+    builtinEmbeddingModel: '内置模型',
+    builtinEmbeddingModelDescription:
+      '内置嵌入模型可以提供最基本的文本向量化支持，请考虑使用自定义嵌入模型以获得更好的性能',
   },
   register: {
     title: '初始化 LangBot 👋',
