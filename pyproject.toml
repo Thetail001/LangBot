@@ -1,6 +1,6 @@
 [project]
 name = "langbot"
-version = "4.1.0"
+version = "4.1.1b1"
 description = "高稳定、支持扩展、多模态 - 大模型原生即时通信机器人平台"
 readme = "README.md"
 requires-python = ">=3.10.1"
@@ -81,7 +81,7 @@ classifiers = [
     "Framework :: AsyncIO",
     "Framework :: Robot Framework",
     "Framework :: Robot Framework :: Library",
-    "License :: OSI Approved :: AGPL-3 License",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Topic :: Communications :: Chat",
@@ -194,3 +194,5 @@ skip-magic-trailing-comma = false
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
 
+[project.scripts]
+langbot = "langbot:main"
